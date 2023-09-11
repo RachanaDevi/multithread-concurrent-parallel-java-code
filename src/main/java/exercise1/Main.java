@@ -14,5 +14,9 @@ public class Main {
         System.out.println("Before starting thread, we are in thread: " + Thread.currentThread().getName());
         thread.start();
         System.out.println("After starting thread, we are in thread: " + Thread.currentThread().getName());
+
+        thread.setUncaughtExceptionHandler((threadCaught, exception) -> {
+            System.out.println("A critical error happened in thread " + thread.getName() + " having exception " + exception);
+        });
     }
 }
