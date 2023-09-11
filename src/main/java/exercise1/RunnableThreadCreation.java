@@ -1,6 +1,6 @@
 package main.java.exercise1;
 
-public class Main {
+public class RunnableThreadCreation {
 
     public static void main(String[] args) {
         Runnable runnable = () -> {
